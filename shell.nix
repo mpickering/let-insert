@@ -1,6 +1,7 @@
 with (import <nixpkgs> {});
 let old-ghc = import /home/matt/old-ghc-nix {pkgs = (import <nixpkgs> {});};
-    ghc = old-ghc.mkGhc { url = "https://gitlab.haskell.org/ghc/ghc/-/jobs/261242/artifacts/raw/ghc-x86_64-fedora27-linux.tar.xz"; hash = "0v2ci6k358jad9p9rjwnrx89v6c8k40g8pqxs5r6yczz11lfm79s" ;};
+ghc = old-ghc.mkGhc { url = "https://gitlab.haskell.org/ghc/ghc/-/jobs/274208/artifacts/raw/ghc-x86_64-fedora27-linux.tar.xz"
+                    ; hash = "1bpjkpki2vbsvgs2j3bj8r7fm268ias1x7674kmkijlawmmb1y7x" ;};
 in
 stdenv.mkDerivation {
   name = "haskell-ide-engine";
